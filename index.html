@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StreamDroid - Sua Diversão Começa Aqui!</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: linear-gradient(to bottom, #000000, #2c003e);
+      color: #fff;
+    }
+
+    header {
+      position: relative;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: fadeSlide 24s infinite;
+    }
+
+    .slide:nth-child(1) { background-image: url('cab.png'); animation-delay: 0s; }
+    .slide:nth-child(2) { background-image: url('mensal.png'); animation-delay: 6s; }
+    .slide:nth-child(3) { background-image: url('semestral.png'); animation-delay: 12s; }
+    .slide:nth-child(4) { background-image: url('anual.png'); animation-delay: 18s; }
+
+    @keyframes fadeSlide {
+      0%   { opacity: 0; transform: translateY(100%); }
+      10%  { opacity: 1; transform: translateY(0); }
+      30%  { opacity: 1; transform: translateY(0); }
+      40%  { opacity: 0; transform: translateY(-100%); }
+      100% { opacity: 0; transform: translateY(-100%); }
+    }
+
+    .content,
+    section,
+    .free-trial {
+      padding: 20px;
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .free-trial a {
+      background-color: #25D366;
+      color: white;
+      font-size: 18px;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 20px;
+      color: #ccc;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+  </header>
+
+  <section>
+    <p><strong>Maria de Oliveira</strong>, cliente da StreamDroid há oito meses:</p>
+    <em>"Esse plano serve certinho para mim e minha família e cabe no meu bolso..."</em>
+  </section>
+
+  <img src="mensal.png" alt="Plano Mensal">
+
+  <section>
+    <p><strong>Paulo S. de Souza</strong>:</p>
+    <em>"Eu prefiro ter a certeza de um plano mais longo e não ter que ficar preocupado todo mês, sou prestador de serviços e tem mês que é fraco, assim com 6 meses pago posso me programar..."</em>
+  </section>
+
+  <img src="semestral.png" alt="Plano Semestral">
+
+  <section>
+    <p><strong>Francinete de Almeida</strong>:</p>
+    <em>"Eu sou uma pessoa que além de qualidade, procuro economizar sempre que posso. E eu tenho nesse plano o melhor dos mundos; programação de alta qualidade e uma economia anual de quase R$ 200,00. É top demais..."</em>
+  </section>
+
+  <img src="anual.png" alt="Plano Anual">
+
+  <section>
+    <p><strong>Agradecimento da StreamDroid</strong></p>
+    <p>Gostaríamos de colocar mais comentários, mas destacamos apenas esses 3 entre os mais de 1400 clientes satisfeitos. Vocês são o verdadeiro show dessa programação. Obrigado!</p>
+    <img src="logo.png" alt="Logo da StreamDroid" style="max-width: 180px; margin-top: 20px;">
+  </section>
+
+  <section class="free-trial">
+    <h2>Teste Grátis por 2:00 hs</h2>
+    <p>Sem compromisso. Comece agora sua jornada com a StreamDroid!</p>
+    <a href="https://wa.me/5586999334312?text=Ol%C3%A1%2C%20tenho%20interesse%20de%20fazer%20o%20teste." target="_blank">
+      Falar no WhatsApp
+    </a>
+  </section>
+
+  <footer>
+    © 2025 StreamDroid - Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
