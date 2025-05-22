@@ -26,14 +26,14 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      animation: fadeSlide 24s infinite;
+      animation: fadeSlide 30s infinite;
     }
 
     .slide:nth-child(1) { background-image: url('cabecalho.png'); animation-delay: 0s; }
     .slide:nth-child(2) { background-image: url('cabecalho2.png'); animation-delay: 6s; }
     .slide:nth-child(3) { background-image: url('mensal.png'); animation-delay: 12s; }
     .slide:nth-child(4) { background-image: url('semestral.png'); animation-delay: 18s; }
-    .slide:nth-child(5) { background-image: url('anual.png'); animation-delay: 18s; }
+    .slide:nth-child(5) { background-image: url('anual.png'); animation-delay: 24s; }
     
     @keyframes fadeSlide {
       0%   { opacity: 0; transform: translateY(100%); }
@@ -78,6 +78,7 @@
 <body>
 
   <header>
+    <div class="slide"></div>
     <div class="slide"></div>
     <div class="slide"></div>
     <div class="slide"></div>
