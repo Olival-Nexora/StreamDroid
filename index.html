@@ -66,6 +66,49 @@
       margin-top: 10px;
     }
 
+    .mural {
+      background: #f0f0f0;
+      color: #222;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .mural h2 {
+      color: #222;
+      margin-bottom: 20px;
+    }
+
+    .mosaico {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+    }
+
+    .mosaico-item {
+      background: #fff;
+      border-radius: 8px;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      font-size: 14px;
+    }
+
+    .cta-btn {
+      background-color: #25D366;
+      color: white;
+      font-size: 18px;
+      padding: 15px 30px;
+      border-radius: 10px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .cta-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
     footer {
       background-color: #111;
       text-align: center;
@@ -117,6 +160,25 @@
     <p>Sem compromisso. Comece agora sua jornada com a StreamDroid!</p>
     <a href="https://wa.me/5586999334312?text=Ol%C3%A1%2C%20tenho%20interesse%20de%20fazer%20o%20teste." target="_blank">
       Falar no WhatsApp
+    </a>
+  </section>
+
+  <section class="mural">
+    <h2>Onde Assistir - Programação Esportiva</h2>
+    <div class="mosaico">
+      <div class="mosaico-item">Celtics x Magic<br>20:00<br>League Pass</div>
+      <div class="mosaico-item">76ers x Wizards<br>20:00<br>League Pass</div>
+      <div class="mosaico-item">Hornets x Raptors<br>20:30<br>League Pass</div>
+      <div class="mosaico-item">Lakers x Mavericks<br>20:30<br>League Pass</div>
+      <div class="mosaico-item">Heat x Bulls<br>21:00<br>League Pass</div>
+      <div class="mosaico-item">Blazers x Jazz<br>22:00<br>League Pass</div>
+      <div class="mosaico-item">Spurs x Warriors<br>23:00<br>League Pass</div>
+      <div class="mosaico-item">Thunder x Suns<br>23:00<br>League Pass</div>
+      <div class="mosaico-item">Nuggets x Kings<br>23:00<br>League Pass</div>
+      <div class="mosaico-item">Rockets x Clippers<br>23:30<br>League Pass</div>
+    </div>
+    <a class="cta-btn" href="https://wa.me/5586999334312?text=Quero%20comprar%20apenas%20um%20jogo%20para%20testar." target="_blank">
+      📲 Compre apenas um jogo para testar
     </a>
   </section>
 
