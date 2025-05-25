@@ -36,10 +36,10 @@
     .slide:nth-child(5) { background-image: url('anual.png'); animation-delay: 24s; }
 
     @keyframes fadeSlide {
-      0%   { opacity: 0; transform: translateY(100%); }
-      10%  { opacity: 1; transform: translateY(0); }
-      30%  { opacity: 1; transform: translateY(0); }
-      40%  { opacity: 0; transform: translateY(-100%); }
+      0% { opacity: 0; transform: translateY(100%); }
+      10% { opacity: 1; transform: translateY(0); }
+      30% { opacity: 1; transform: translateY(0); }
+      40% { opacity: 0; transform: translateY(-100%); }
       100% { opacity: 0; transform: translateY(-100%); }
     }
 
@@ -51,6 +51,68 @@
     img {
       max-width: 100%;
       height: auto;
+    }
+
+    .free-trial a {
+      background-color: #25D366;
+      color: white;
+      font-size: 18px;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .mural {
+      background: #f0f0f0;
+      color: #222;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .mural h2 {
+      color: #222;
+      margin-bottom: 20px;
+    }
+
+    .mosaico {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+    }
+
+    .mosaico-item {
+      background: #fff;
+      border-radius: 8px;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      font-size: 14px;
+    }
+
+    .cta-btn {
+      background-color: #25D366;
+      color: white;
+      font-size: 18px;
+      padding: 15px 30px;
+      border-radius: 10px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .cta-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 20px;
+      color: #ccc;
+      font-size: 14px;
     }
 
     .seletor-wallpaper {
@@ -86,91 +148,162 @@
       margin-top: 20px;
       border: 1px solid #fff;
       width: 100%;
-      max-width: 600px;
+      max-width: 800px;
       height: auto;
     }
 
     #downloadLink {
       display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
+      margin-top: 15px;
       background-color: #25D366;
       color: white;
+      padding: 10px 20px;
       border-radius: 5px;
       text-decoration: none;
+      font-size: 16px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Conteúdo omitido para foco no seletor de wallpaper -->
+<header>
+  <div class="slide" aria-hidden="true"></div>
+  <div class="slide" aria-hidden="true"></div>
+  <div class="slide" aria-hidden="true"></div>
+  <div class="slide" aria-hidden="true"></div>
+  <div class="slide" aria-hidden="true"></div>
+</header>
 
-  <section class="seletor-wallpaper">
-    <h2>Crie seu Wallpaper Personalizado</h2>
+<section>
+  <p><strong>Maria de Oliveira</strong>, cliente da StreamDroid há oito meses:</p>
+  <em>"Esse plano serve certinho para mim e minha família e cabe no meu bolso..."</em>
+</section>
 
-    <label for="time">Escolha seu time:</label><br>
-    <select id="time">
-      <option value="Fla.png">Flamengo</option>
-      <option value="Pal.png">Palmeiras</option>
-      <option value="Bota.png">Botafogo</option>
-      <option value="SP.png">São Paulo</option>
-      <option value="Santos.png">Santos</option>
-      <option value="Mira.png">Mirassol</option>
-      <option value="Galo.png">Atlético-MG</option>
-      <option value="Cruz.png">Cruzeiro</option>
-      <option value="Juv.png">Juventude</option>
-      <option value="Grêmio.png">Grêmio</option>
-      <option value="Inter.png">Internacional</option>
-      <option value="Bahia.png">Bahia</option>
-      <option value="Vit.png">Vitória</option>
-      <option value="Flu.png">Fluminense</option>
-      <option value="Vasco.png">Vasco</option>
-      <option value="Fort.png">Fortaleza</option>
-      <option value="Brag.png">Bragantino</option>
-      <option value="Cor.png">Corinthians</option>
-      <option value="Ceara.png">Ceará</option>
-      <option value="Sport.png">Sport</option>
-    </select><br>
+<img src="mensal.png" alt="Plano Mensal" loading="lazy">
 
-    <label for="nome">Digite seu nome:</label><br>
-    <input type="text" id="nome" placeholder="Seu nome"><br>
+<section>
+  <p><strong>Paulo S. de Souza</strong>:</p>
+  <em>"Eu prefiro ter a certeza de um plano mais longo e não ter que ficar preocupado todo mês, sou prestador de serviços e tem mês que é fraco, assim com 6 meses pago posso me programar..."</em>
+</section>
 
-    <button onclick="gerarWallpaper()">Gerar Wallpaper</button>
+<img src="semestral.png" alt="Plano Semestral" loading="lazy">
 
-    <canvas id="canvas" width="1080" height="1920"></canvas><br>
+<section>
+  <p><strong>Francinete de Almeida</strong>:</p>
+  <em>"Eu sou uma pessoa que além de qualidade, procuro economizar sempre que posso. E eu tenho nesse plano o melhor dos mundos; programação de alta qualidade e uma economia anual de quase R$ 200,00. É top demais..."</em>
+</section>
 
-    <a id="downloadLink" download="wallpaper.png">Baixar Wallpaper</a>
-  </section>
+<img src="anual.png" alt="Plano Anual" loading="lazy">
 
-  <script>
-    function gerarWallpaper() {
-      const time = document.getElementById('time').value;
-      const nome = document.getElementById('nome').value.trim();
-      const canvas = document.getElementById('canvas');
-      const ctx = canvas.getContext('2d');
+<section>
+  <p><strong>Agradecimento da StreamDroid</strong></p>
+  <p>Gostaríamos de colocar mais comentários, mas destacamos apenas esses 3 entre os mais de 1400 clientes satisfeitos. Vocês são o verdadeiro show dessa programação. Obrigado!</p>
+  <img src="logo.png" alt="Logo da StreamDroid" style="max-width: 180px; margin-top: 20px;" loading="lazy">
+</section>
 
-      const img = new Image();
-      img.src = time;
+<section class="free-trial">
+  <h2>Teste Grátis por 2:00 hs</h2>
+  <p>Sem compromisso. Comece agora sua jornada com a StreamDroid!</p>
+  <a href="https://wa.me/5586999334312?text=Ol%C3%A1%2C%20tenho%20interesse%20de%20fazer%20o%20teste." target="_blank">
+    Falar no WhatsApp
+  </a>
+</section>
 
-      img.onload = function() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+<section class="mural">
+  <h2>Onde Assistir - Programação Esportiva</h2>
+  <div class="mosaico">
+    <div class="mosaico-item">Botafogo x Ceará<br>24.05 (Sáb) — 16:00<br>Prime Video (832)</div>
+    <div class="mosaico-item">São Paulo x Mirassol<br>24.05 (Sáb) — 18:30<br>Premiere 1 (721)</div>
+    <div class="mosaico-item">Fluminense x Vasco<br>24.05 (Sáb) — 18:30<br>Premiere 2 (722)</div>
+    <div class="mosaico-item">Atlético-MG x Corinthians<br>24.05 (Sáb) — 21:00<br>Premiere 1 (721), sportv (539), sportv 4K (444)</div>
+    <div class="mosaico-item">Grêmio x Bahia<br>25.05 (Dom) — 11:00<br>Premiere 1 (721)</div>
+    <div class="mosaico-item">Palmeiras x Flamengo<br>25.05 (Dom) — 16:00<br>Premiere 1 (721)</div>
+    <div class="mosaico-item">Sport x Internacional<br>25.05 (Dom) — 16:00<br>Premiere 2 (722)</div>
+    <div class="mosaico-item">Vitória x Santos<br>25.05 (Dom) — 18:30<br>Premiere 2 (722)</div>
+    <div class="mosaico-item">Fortaleza x Cruzeiro<br>25.05 (Dom) — 20:30<br>Premiere 1 (721), sportv (539)</div>
+    <div class="mosaico-item">Bragantino x Juventude<br>26.05 (Seg) — 20:00<br>Premiere 1 (721), sportv (539)</div>
+  </div>
+  <a class="cta-btn" href="https://wa.me/5586999334312?text=Quero%20comprar%20apenas%20um%20jogo%20para%20testar." target="_blank">
+    📲 Compre apenas um jogo para testar
+  </a>
+</section>
 
-        ctx.font = "bold 60px Arial";
-        ctx.fillStyle = "#ffffff";
-        ctx.strokeStyle = "#000000";
-        ctx.lineWidth = 4;
-        ctx.textAlign = "center";
+<section class="seletor-wallpaper">
+  <h2>Crie seu Wallpaper Personalizado</h2>
 
-        const texto = nome || "Seu Nome Aqui";
-        ctx.strokeText(texto, canvas.width / 2, canvas.height - 150);
-        ctx.fillText(texto, canvas.width / 2, canvas.height - 150);
+  <label for="time">Escolha seu time:</label><br>
+  <select id="time">
+    <option value="Fla.png">Flamengo</option>
+    <option value="Pal.png">Palmeiras</option>
+    <option value="Bota.png">Botafogo</option>
+    <option value="SP.png">São Paulo</option>
+    <option value="Santos.png">Santos</option>
+    <option value="Mira.png">Mirassol</option>
+    <option value="Galo.png">Atlético-MG</option>
+    <option value="Cruz.png">Cruzeiro</option>
+    <option value="Juv.png">Juventude</option>
+    <option value="Grêmio.png">Grêmio</option>
+    <option value="Inter.png">Internacional</option>
+    <option value="Bahia.png">Bahia</option>
+    <option value="Vit.png">Vitória</option>
+    <option value="Flu.png">Fluminense</option>
+    <option value="Vasco.png">Vasco</option>
+    <option value="Fort.png">Fortaleza</option>
+    <option value="Brag.png">Bragantino</option>
+    <option value="Cor.png">Corinthians</option>
+    <option value="Ceara.png">Ceará</option>
+    <option value="Sport.png">Sport</option>
+  </select><br>
 
-        const link = document.getElementById('downloadLink');
-        link.href = canvas.toDataURL();
-      }
+  <label for="nome">Digite seu nome:</label><br>
+  <input type="text" id="nome" placeholder="Seu nome"><br>
+
+  <button onclick="gerarWallpaper()">Gerar Wallpaper</button>
+
+  <br><br>
+
+  <canvas id="canvas"></canvas><br>
+
+  <a id="downloadLink" download="wallpaper.png">Baixar Wallpaper</a>
+</section>
+
+<footer>
+  © 2025 StreamDroid - Todos os direitos reservados.
+</footer>
+
+<script>
+  function gerarWallpaper() {
+    const time = document.getElementById('time').value;
+    const nome = document.getElementById('nome').value.trim();
+
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+
+    const img = new Image();
+    img.src = time; // imagens no mesmo diretório
+
+    img.onload = function() {
+      canvas.width = 800;
+      canvas.height = 600;
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+      ctx.font = "48px Arial";
+      ctx.fillStyle = "#ffffff";
+      ctx.strokeStyle = "#000000";
+      ctx.lineWidth = 3;
+      ctx.textAlign = "center";
+
+      const texto = nome || "Seu Nome Aqui";
+      ctx.strokeText(texto, canvas.width / 2, canvas.height - 50);
+      ctx.fillText(texto, canvas.width / 2, canvas.height - 50);
+
+      const link = document.getElementById('downloadLink');
+      link.href = canvas.toDataURL();
     }
-  </script>
+  }
+</script>
 
 </body>
 </html>
