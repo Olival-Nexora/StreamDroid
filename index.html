@@ -148,7 +148,7 @@
       margin-top: 20px;
       border: 1px solid #fff;
       width: 100%;
-      max-width: 800px;
+      max-width: 600px;
       height: auto;
     }
 
@@ -260,9 +260,7 @@
 
   <button onclick="gerarWallpaper()">Gerar Wallpaper</button>
 
-  <br><br>
-
-  <canvas id="canvas"></canvas><br>
+  <canvas id="canvas" width="1080" height="1920"></canvas><br>
 
   <a id="downloadLink" download="wallpaper.png">Baixar Wallpaper</a>
 </section>
@@ -275,29 +273,25 @@
   function gerarWallpaper() {
     const time = document.getElementById('time').value;
     const nome = document.getElementById('nome').value.trim();
-
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
 
     const img = new Image();
-    img.src = time; // imagens no mesmo diretório
+    img.src = time;
 
     img.onload = function() {
-      canvas.width = 800;
-      canvas.height = 600;
-
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
-      ctx.font = "48px Arial";
+      ctx.font = "bold 60px Arial";
       ctx.fillStyle = "#ffffff";
       ctx.strokeStyle = "#000000";
-      ctx.lineWidth = 3;
+      ctx.lineWidth = 4;
       ctx.textAlign = "center";
 
       const texto = nome || "Seu Nome Aqui";
-      ctx.strokeText(texto, canvas.width / 2, canvas.height - 50);
-      ctx.fillText(texto, canvas.width / 2, canvas.height - 50);
+      ctx.strokeText(texto, canvas.width / 2, canvas.height - 150);
+      ctx.fillText(texto, canvas.width / 2, canvas.height - 150);
 
       const link = document.getElementById('downloadLink');
       link.href = canvas.toDataURL();
